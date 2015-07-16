@@ -15,8 +15,9 @@ gulp.task('analyze', function () {
     var basePath = path.resolve('./src/app/');
     $$.util.log('Analyzing sources in ' + basePath);
 
-    return gulp.src([basePath + '/**/00_*.js'])
-        .pipe(filter(['*', '!*functions.js']))
+    return gulp.src([basePath + '/**/*.js'])
+        // uncommet below line to get jshint results
+        .pipe(filter(['*', '!*Calculator.js']))
         .pipe($$.jshint())
         .pipe($$.jshint.reporter('jshint-stylish', {verbose: true}))
         .pipe($$.jshint.reporter('fail'));

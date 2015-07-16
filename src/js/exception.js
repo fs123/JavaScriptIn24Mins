@@ -2,6 +2,7 @@
 
 var add = function (a, b) {
     if (typeof a !== 'number' || typeof b !== 'number') {
+        // we could also throw another object (e.g. a string), but then we have no callstack
         throw new TypeError('add needs numbers');
     }
     return a + b;

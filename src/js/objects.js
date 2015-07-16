@@ -15,6 +15,8 @@ var flight = {
 };
 
 
+
+
 flight["NuMber"] // undefined
 flight["number"] // 815
 flight.number // 815
@@ -28,7 +30,7 @@ var equipment = flight.equipment || "unknown"; // fallback
 try {
     flight.equipment.model  // throw "TypeError"
 } catch (e) {
-    console.error("Uups: " + e.stack);
+    console.log("Uups: " + e.stack);
 }
 flight.equipment && flight.equipment.model  // undefined
 

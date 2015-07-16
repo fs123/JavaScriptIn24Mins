@@ -2,7 +2,7 @@
 
 var expect = require('chai').expect;
 
-var functions = require('../js/functions');
+var functions = require('../app/Calculator');
 
 describe("The module 'functions'", function() {
     it("can add 2+3", function() {
